@@ -57,6 +57,7 @@ export default function Navbar() {
     };
 
     useEffect(() => {
+        console.log("first useeffect....");
         fetchUser();
         updateCartCount();
 
@@ -70,6 +71,7 @@ export default function Navbar() {
         window.addEventListener("storage", handleCartUpdate);
         window.addEventListener("focus", handleFocus);
 
+
         return () => {
             window.removeEventListener("cart-updated", handleCartUpdate);
             window.removeEventListener("storage", handleCartUpdate);
@@ -78,6 +80,7 @@ export default function Navbar() {
     }, []);
 
     useEffect(() => {
+         fetchUser();
         setMobileOpen(false);
     }, [pathname]);
 
