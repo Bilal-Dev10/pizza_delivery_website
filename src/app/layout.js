@@ -28,79 +28,100 @@
 
 
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+// import Navbar from "@/components/Navbar";
+// import Footer from "@/components/Footer";
+// import "./globals.css";
+// import { Toaster } from "react-hot-toast";
+
+// export const metadata = {
+//     metadataBase: new URL("https://www.yourdomain.com"),
+
+//     title: {
+//         default: "Pizza House | Fresh Pizza Delivered",
+//         template: "%s | Pizza House",
+//     },
+
+//     description:
+//         "Order delicious fresh pizzas online from Pizza House. Explore our pizza menu and enjoy freshly prepared food delivered to your doorstep.",
+
+//     keywords: [
+//         "Pizza House",
+//         "online pizza delivery",
+//         "fresh pizza",
+//         "order pizza online",
+//         "pizza delivery Pakistan",
+//         "delicious pizza",
+//         "best pizza",
+//     ],
+
+//     authors: [{ name: "Pizza House" }],
+
+//     openGraph: {
+//         title: "Pizza House | Fresh Pizza Delivered",
+//         description:
+//             "Enjoy delicious, freshly prepared pizzas. Explore our menu and order online from Pizza House.",
+//         siteName: "Pizza House",
+//         type: "website",
+//         locale: "en_PK",
+//         images: [
+//             {
+//                 url: "/og-image.jpg",
+//                 width: 1200,
+//                 height: 630,
+//                 alt: "Pizza House - Fresh Pizza Delivered",
+//             },
+//         ],
+//     },
+
+//     twitter: {
+//         card: "summary_large_image",
+//         title: "Pizza House | Fresh Pizza Delivered",
+//         description:
+//             "Order delicious fresh pizzas online from Pizza House.",
+//         images: ["/og-image.jpg"],
+//     },
+
+//     robots: {
+//         index: true,
+//         follow: true,
+//     },
+// };
+
+// export default function RootLayout({ children }) {
+//     return (
+//         <html lang="en">
+//             <body>
+//                 <Navbar />
+
+//                 {children}
+
+//                 <Footer />
+
+//                 <Toaster
+//                     position="top-right"
+//                     reverseOrder={false}
+//                 />
+//             </body>
+//         </html>
+//     );
+// }
+
+
+import ConditionalLayout from "@/components/ConditionalLayout";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
 export const metadata = {
-    metadataBase: new URL("https://www.yourdomain.com"),
-
-    title: {
-        default: "Pizza House | Fresh Pizza Delivered",
-        template: "%s | Pizza House",
-    },
-
-    description:
-        "Order delicious fresh pizzas online from Pizza House. Explore our pizza menu and enjoy freshly prepared food delivered to your doorstep.",
-
-    keywords: [
-        "Pizza House",
-        "online pizza delivery",
-        "fresh pizza",
-        "order pizza online",
-        "pizza delivery Pakistan",
-        "delicious pizza",
-        "best pizza",
-    ],
-
-    authors: [{ name: "Pizza House" }],
-
-    openGraph: {
-        title: "Pizza House | Fresh Pizza Delivered",
-        description:
-            "Enjoy delicious, freshly prepared pizzas. Explore our menu and order online from Pizza House.",
-        siteName: "Pizza House",
-        type: "website",
-        locale: "en_PK",
-        images: [
-            {
-                url: "/og-image.jpg",
-                width: 1200,
-                height: 630,
-                alt: "Pizza House - Fresh Pizza Delivered",
-            },
-        ],
-    },
-
-    twitter: {
-        card: "summary_large_image",
-        title: "Pizza House | Fresh Pizza Delivered",
-        description:
-            "Order delicious fresh pizzas online from Pizza House.",
-        images: ["/og-image.jpg"],
-    },
-
-    robots: {
-        index: true,
-        follow: true,
-    },
+    title: "Pizza House | Fresh Pizza Delivered",
+    description: "Order delicious fresh pizzas online from Pizza House.",
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <Navbar />
-
-                {children}
-
-                <Footer />
-
-                <Toaster
-                    position="top-right"
-                    reverseOrder={false}
-                />
+                <ConditionalLayout>{children}</ConditionalLayout>
+                <Toaster position="top-right" reverseOrder={false} />
             </body>
         </html>
     );
