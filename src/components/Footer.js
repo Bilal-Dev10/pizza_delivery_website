@@ -219,29 +219,29 @@ export default function Footer() {
                                 </Link>
                             </li>
 
-                            <li>
+                            {/* <li>
                                 <Link href="/menu" className="hover:text-[#E94B35] transition">
                                     Our Menu
                                 </Link>
-                            </li>
+                            </li> */}
 
-                            <li>
+                            {/* <li>
                                 <Link href="/cart" className="hover:text-[#E94B35] transition">
                                     Shopping Cart
                                 </Link>
-                            </li>
+                            </li> */}
 
-                            <li>
+                            {/* <li>
                                 <Link href="/orders" className="hover:text-[#E94B35] transition">
                                     My Orders
                                 </Link>
-                            </li>
+                            </li> */}
 
-                            <li>
+                            {/* <li>
                                 <Link href="/profile" className="hover:text-[#E94B35] transition">
                                     My Account
                                 </Link>
-                            </li>
+                            </li> */}
 
                             <li>
                                 <Link href="/about" className="hover:text-[#E94B35] transition">

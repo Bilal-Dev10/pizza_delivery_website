@@ -124,6 +124,8 @@ export default function Navbar() {
                     <div className="hidden lg:flex items-center gap-8">
                         <Link href="/" className={navLink}>Home</Link>
                         <Link href="/menu" className={navLink}>Menu</Link>
+                        <Link href="/about" className={navLink}>About</Link>
+                        <Link href="/contact" className={navLink}>Contact</Link>
 
                         {user?.role === "customer" && (
                             <>
@@ -199,6 +201,14 @@ export default function Navbar() {
 
                         <Link href="/menu" className="block py-1 text-gray-700">
                             Menu
+                        </Link>
+
+                        <Link href="/about" className="block py-1 text-gray-700">
+                            About
+                        </Link>
+
+                        <Link href="/contact" className="block py-1 text-gray-700">
+                            Contact
                         </Link>
 
                         <Link href="/cart" className="flex items-center gap-2 py-1 text-gray-700">
